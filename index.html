@@ -2,13 +2,33 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power BI Dashboard</title>
+    <title>Moje stránka s Power BI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 30px;
+        }
+        h1 {
+            color: #333;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Vítejte</h1>
-    <p>Pro zobrazení Power BI dashboardu klikněte na následující odkaz:</p>
-    <a href="https://app.powerbi.com/view?r=eyJrIjoiZWM5NTdkMGEtZjg1Ni00MzVjLWE0YTUtNGExNjFkYWM4OWNmIiwidCI6ImM2M2NlNzI5LWNhMTctNGU1Mi1hYTJkLTk2Yjc5NDg5YTU0MiIsImMiOjh9" target="_blank">Zobrazit dashboard</a>
-	<a href="https://app.powerbi.com/view?r=eyJrIjoiNTYwOWQ0ZWItN2M0Ni00NWIzLThiM2MtMDJmYTI1Y2RjNjUzIiwidCI6ImM2M2NlNzI5LWNhMTctNGU1Mi1hYTJkLTk2Yjc5NDg5YTU0MiIsImMiOjh9" target="_blank">Zobrazit dashboard</a>
+    <h1>Ahoj světe!</h1>
+    <p>Tohle je moje HTML stránka s vloženým Power BI reportem.</p>
+
+    <!-- ZDE SE VLOŽÍ TVŮJ REPORT -->
+    <iframe 
+        src="https://app.powerbi.com/view?r=eyJrIjoiZmY3NDMyYWYtYmFjNy00OWE0LWEwZjEtMGIzM2E5NWQ1MmQ4IiwidCI6ImM2M2NlNzI5LWNhMTctNGU1Mi1hYTJkLTk2Yjc5NDg5YTU0MiIsImMiOjh9" 
+        allowfullscreen="true">
+    </iframe>
 </body>
 </html>
