@@ -2,33 +2,65 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Moje stránka s Power BI</title>
+    <title>Power BI na tlačítko</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             text-align: center;
-            padding: 30px;
+            padding: 50px;
         }
+
         h1 {
             color: #333;
         }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #report-container {
+            margin-top: 40px;
+            display: none;
+        }
+
         iframe {
             width: 100%;
             height: 600px;
             border: none;
-            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    <h1>Ahoj světe!</h1>
-    <p>Tohle je moje HTML stránka s vloženým Power BI reportem.</p>
 
-    <!-- ZDE SE VLOŽÍ TVŮJ REPORT -->
-    <iframe 
-        src="https://app.powerbi.com/view?r=eyJrIjoiZmY3NDMyYWYtYmFjNy00OWE0LWEwZjEtMGIzM2E5NWQ1MmQ4IiwidCI6ImM2M2NlNzI5LWNhMTctNGU1Mi1hYTJkLTk2Yjc5NDg5YTU0MiIsImMiOjh9" 
-        allowfullscreen="true">
-    </iframe>
+    <h1>Moje HTML stránka</h1>
+    <p>Klikni na tlačítko a načte se Power BI report:</p>
+    
+    <button onclick="showReport()">Zobrazit report</button>
+
+    <div id="report-container">
+        <iframe 
+            src="https://app.powerbi.com/view?r=eyJrIjoiZmY3NDMyYWYtYmFjNy00OWE0LWEwZjEtMGIzM2E5NWQ1MmQ4IiwidCI6ImM2M2NlNzI5LWNhMTctNGU1Mi1hYTJkLTk2Yjc5NDg5YTU0MiIsImMiOjh9" 
+            allowfullscreen="true">
+        </iframe>
+    </div>
+
+    <script>
+        function showReport() {
+            document.getElementById("report-container").style.display = "block";
+        }
+    </script>
+
 </body>
 </html>
